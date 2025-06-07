@@ -134,7 +134,7 @@ function updateStats() {
     let solved = parseInt(localStorage.getItem('solved') || '0', 10);
     solved++;
     localStorage.setItem('solved', solved);
-    document.getElementById('solved-count').textContent = `Solved: ${solved}`;
+    document.getElementById('solved-count').textContent = `${solved}`;
 }
 
 function toggleTheme() {
