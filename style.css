@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top, #101020, midnightblue);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.5s, color 0.5s;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header .icon {
+  width: 60px;
+  height: 60px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  color: #fff;
+  text-shadow: 0 0 8px #00e5ff;
+  text-align: center;
+}
+
+.header h1 span {
+  color: #00e5ff;
+  font-weight: lighter;
+}
+
+.controls {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.controls button,
+.controls label {
+  background: #222;
+  border: 2px solid #00e5ff;
+  padding: 10px 15px;
+  color: #00e5ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 0 5px #00e5ff60;
+}
+
+.controls button:hover,
+.controls label:hover {
+  background: #00e5ff;
+  color: black;
+}
+.controls button:active,
+.controls label:active {
+  transform: scale(1.05);
+}
+
+.theme-switch input {
+  margin-right: 5px;
+  transform: scale(1.2);
+}
+
+.sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 2px;
+  width: 90vmin;
+  height: 90vmin;
+  max-width: 500px;
+  max-height: 500px;
+  box-shadow: 0 0 20px #00e5ff33;
+  margin-bottom: 20px;
+}
+
+.sudoku-board input {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  font-size: 1.4rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  background: #111;
+  color: #00e5ff;
+  border: 1px solid #444;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+footer {
+  color: #00e5ff;
+  text-align: center;
+  width: 100%;
+  text-shadow: 0 0 8px #00a6ff;
+}
+.name{
+  color: #00e5ff;
+  text-decoration: none;
+  transition: color 0.3s;
+  
+}
+.sudoku-board input:focus {
+  border: 2px solid #00e5ff;
+  background: black;
+}
+
+.sudoku-board input.prefilled {
+  background: #222;
+  font-weight: bold;
+  pointer-events: none;
+  color: #88f2ff;
+}
+
+.sudoku-board input.error {
+  background-color: #ff0044;
+  color: white;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-2px); }
+}
+
+.message {
+  margin: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #00ff99;
+  text-shadow: 0 0 5px #00ff99aa;
+  text-align: center;
+}
+
+.timer-stats {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 20px;
+  font-size: 1.1rem;
+  justify-content: center;
+}
+
+.dark {
+  background: linear-gradient(to bottom, black, #0c0c0c);
+  color: #00f0ff;
+}
+.dark .sudoku-board input.prefilled {
+  background: #222;
+  color: #00f0ff;
+}
+.dark .sudoku-board input {
+  background: black;
+  color: #00f0ff;
+  border: 1px solid #333;
+}
+.dark .controls button,
+.dark .controls label {
+  background: #111;
+  border-color: #00f0ff;
+  color: #00f0ff;
+  box-shadow: 0 0 8px #00f0ff60;
+}
+
+@media (max-width: 600px) {
+  .sudoku-board {
+    width: 95vmin;
+    height: 95vmin;
+  }
+
+  .controls button,
+  .controls label {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .sudoku-board input {
+    font-size: 1.2rem;
+  }
+}

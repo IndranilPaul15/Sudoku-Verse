@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SudokuVerse: The Puzzle of the Cosmos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <img src="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" alt="Sudoku Icon" class="icon">
+    <h1>SudokuVerse: <span>The Puzzle of the Cosmos</span></h1>
+  </div>
+
+  <div class="controls">
+    <button onclick="newGame()">🚀 New Game</button>
+    <button onclick="resetBoard()">🔁 Reset</button>
+    <button onclick="checkSolution()">✅ Check</button>
+    <button onclick="giveHint()">💡 Hint</button>
+    <label class="theme-switch">
+      <input type="checkbox" onchange="toggleTheme()">🌗
+    </label>
+  </div>
+
+  <div class="timer-stats">
+    <div id="timer">⏱ Time: 00:00</div>
+    <div id="stats">🧮 Solved: <span id="solved-count">0</span></div>
+  </div>
+
+  <div class="sudoku-board" id="sudoku-board"></div>
+
+  <div id="message" class="message"></div>
+
+  <footer>
+    <p>🌐Created by <a class="name" href="www.linkedin.com/in/indranil-paul-470a13271">Indranil Paul</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
