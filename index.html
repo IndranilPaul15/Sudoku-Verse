@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SudokuVerse: The Puzzle of the Cosmos</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="header">
     <img src="https://cdn-icons-png.flaticon.com/512/3523/3523063.png" alt="Sudoku Icon" class="icon">
@@ -18,7 +20,7 @@
     <button onclick="checkSolution()">✅ Check</button>
     <button onclick="giveHint()">💡 Hint</button>
     <label class="theme-switch">
-      <input type="checkbox" onchange="toggleTheme()">🌗
+      <div onclick="toggleTheme()">🌗</div>
     </label>
   </div>
 
@@ -37,4 +39,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
